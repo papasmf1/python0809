@@ -27,3 +27,20 @@ print( userURIBuilder("credu.com", "80", id="kim", passwd="1234") )
 print( userURIBuilder("credu.com", "80", id="kim", passwd="1234",
     name="mike", age="30") )
 
+#이름이 없는 간결한 함수 정의 문법(람다)
+#함수의 매개변수(인자)로 즉흥적으로 함수를 정의
+g = lambda x,y:x*y 
+print( g(3,4) )
+print( g(5,6) )
+print( (lambda x:x*x)(3) )
+
+print( globals() )
+
+#열거가능한 형식(리스트....)
+for i in [1,2,3]:
+    print(i)
+
+for char in "abcd":
+    print(char)
+
+    
