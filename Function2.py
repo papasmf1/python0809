@@ -26,3 +26,36 @@ change(wordlist)
 print("함수 호출후:", wordlist)
 
 
+#이름해석규칙(LGB)
+x = 1 
+def func(a):
+    return a+x 
+
+#호출
+print( func(1) )
+
+def func2(a):
+    x = 2 
+    return a+x 
+
+#호출 
+print( func2(1) )
+
+#기본값
+def times(a=10,b=20):
+    return a*b 
+
+#호출 
+print( times() )
+print( times(5) )
+print( times(b=3) )
+print( times(3,4) )
+
+#키워드 인자(파라메터명 기술)
+def connectURI(server, port):
+    strURL = "http://" + server + ":" + port 
+    return strURL 
+
+#호출
+print( connectURI("credu.com", "80") )
+print( connectURI(port="8080", server="credu.com") )
