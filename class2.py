@@ -14,4 +14,16 @@ p1 = Person()
 p2 = Person() 
 print("인스턴스 갯수:{0}".format(Person.num_person) )
 
+#실행시간에 변수를 추가(동적인 형식)
+Person.title = "new title"
+print( p1.title )
+print( p2.title )
+print( Person.title )
+
+#블럭으로 주석 처리: ctrl + / 
+#인스턴스에 추가
+# p1.age = 30
+# print(p1.age)
+# print(p2.age)
+
 
