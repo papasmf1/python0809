@@ -20,7 +20,4 @@ class BankAccount:
 account1 = BankAccount(100, "전우치", 15000)
 account1.withdraw(3000)
 print(account1)
-#print(account1.__balance)
-#외부에서 테스트하는 변경된 이름(백도어)
-#print(account1._BankAccount__balance)
 
