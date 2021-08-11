@@ -24,8 +24,8 @@ print( result )
 
 #반복구문
 for item in result:
-    print(item)
-
+    #print(item, end="")
+    print(item.replace("\n", ""))
 
 f.close() 
 
