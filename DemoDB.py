@@ -3,7 +3,7 @@ import sqlite3
 
 #연결객체를 리턴(일단은 메모리에 저장)
 #con = sqlite3.connect(":memory:")
-con = sqlite3.connect("c:\\work\\test2.db")
+con = sqlite3.connect("c:\\work\\sample2.db")
 
 #구문을 실행하는 커서객체 리턴
 cur = con.cursor()
@@ -25,4 +25,7 @@ cur.executemany("insert into PhoneBook values (?, ?);", datalist )
 cur.execute("select * from PhoneBook;")
 for row in cur:
     print(row)
+
+#정상적으로 완료(로그에 기록 --> 데이터베이스 기록)
+con.commit()
 
