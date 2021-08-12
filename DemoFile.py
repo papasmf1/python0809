@@ -28,5 +28,8 @@ for item in result:
     print(item.replace("\n", ""))
 
 f.close() 
-
+# 어디쯤 읽고있어? f.tell() 
+# 한글
+# abcd
+# 1234 
 
