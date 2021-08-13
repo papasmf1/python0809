@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 #웹서버와 통신
 import urllib.request
 
+
 #파일로 저장 
 f = open("c:\\work\\webtoon.txt", "wt", encoding="utf-8")
 for i in range(1,6):

@@ -3,6 +3,11 @@
 import sys 
 from PyQt5.QtWidgets import * 
 from PyQt5 import uic 
+#크롤링
+from bs4 import BeautifulSoup
+#웹서버와 통신
+import urllib.request
+
 
 #미리 저장한 화면을 로딩(두번째 화면)
 form_class = uic.loadUiType("form2.ui")[0]
@@ -15,7 +20,18 @@ class DemoForm(QMainWindow, form_class):
         self.setupUi(self)
     #슬롯메서드(시그널이 발생하면 자동 호출)
     def firstClick(self):
-        self.label.setText("첫번째")
+        f = open("c:\\work\\webtoon.txt", "a+", encoding="utf-8")
+        for i in range(1,6):
+            url = "https://comic.naver.com/webtoon/list?titleId=20853&weekday=fri&page=" + str(i)
+            data = urllib.request.urlopen(url)
+            soup = BeautifulSoup(data, "html.parser")
+            cartoons = soup.find_all("td", class_="title")
+            for item in cartoons:
+                title = item.find("a").text 
+                print( title.strip() )
+                f.write( title.strip() + "\n" ) 
+        f.close() 
+        self.label.setText("웹툰 크롤링 종료~~")
     def secondClick(self):
         self.label.setText("두번째 버튼을 클릭")
     def thirdClick(self):
