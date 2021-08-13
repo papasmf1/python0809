@@ -29,7 +29,7 @@ class DemoForm(QMainWindow, form_class):
             for item in cartoons:
                 title = item.find("a").text 
                 print( title.strip() )
-                f.write( title.strip() + "\n" ) 
+                f.write( title.strip() + "\n") 
         f.close() 
         self.label.setText("웹툰 크롤링 종료~~")
     def secondClick(self):
