@@ -9,7 +9,7 @@ form_class = uic.loadUiType("Form.ui")[0]
 
 #폼클래스 정의
 class DemoForm(QDialog, form_class):
-    def __init__(self):
+    def __inㅑt__(self):
         super().__init__() 
         self.setupUi(self)
         self.label.setText("첫번째 Qt데모")
