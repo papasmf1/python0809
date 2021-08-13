@@ -28,9 +28,8 @@ for n in range(0,10):
         for item in list:
                 try:
                         title = item.text 
-                        print( title.strip() )
-                        # if (re.search('아이폰', title)):
-                        #         print(title.strip())
+                        if (re.search('맥북', title)):
+                                print(title.strip())
 
                 except:
                         pass
